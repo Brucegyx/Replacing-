@@ -1,0 +1,27 @@
+{
+    "name": "Replacing images",
+    "version": "1.1",
+    "manifest_version": 2,
+    "icons" :{"128" : "exchange.png"},
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    },
+    "content_scripts": [
+        { "matches": ["<all_urls>"],
+        "js": ["content.js"]
+        }
+    ],
+    
+    "browser_action": {
+        "default_icon": "exchange.png",
+        "default_title": "replas"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "hacked.png"
+        ]
+    
+}
